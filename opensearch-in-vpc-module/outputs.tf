@@ -26,11 +26,6 @@ output "opensearch_vpc_endpoint_id" {
   description = "The ID of the OpenSearch VPC Endpoint"
 }
 
-output "opensearch_vpc_endpoint_dns_entries" {
-  value       = aws_opensearch_vpc_endpoint.aos_vpc_endpoint.dns_entry
-  description = "The DNS entries for the VPC Endpoint"
-}
-
 output "opensearch_security_group_id" {
   value = aws_security_group.opensearch.id
 }
