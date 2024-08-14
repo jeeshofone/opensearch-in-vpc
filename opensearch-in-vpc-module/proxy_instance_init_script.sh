@@ -38,7 +38,7 @@ server {
         proxy_redirect https://$cognito_endpoint https://$host;
 
         # Update cookie domain and path
-        proxy_cookie_domain $es_endpoint $host;
+        proxy_cookie_domain $os_endpoint $host;
 
         # Response buffer settings
         proxy_buffer_size 128k;
