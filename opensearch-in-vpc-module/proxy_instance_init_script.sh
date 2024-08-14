@@ -27,12 +27,12 @@ server {
     ssl_ciphers HIGH:!aNULL:!eNULL:!EXPORT:!CAMELLIA:!DES:!MD5:!PSK:!RC4;
     ssl_prefer_server_ciphers on;
 
-    set $es_endpoint ${elasticsearch_endpoint};
+    set $os_endpoint ${opensearch_endpoint};
     set $cognito_endpoint ${cognito_host};
 
-    location ^~ /_plugin/kibana {
-        # Forward requests to Kibana
-        proxy_pass https://$es_endpoint;
+    location ^~ /_dashboards {
+        # Forward requests to OpenSearch Dashboards
+        proxy_pass https://$os_endpoint;
 
         # Handle redirects to Amazon Cognito
         proxy_redirect https://$cognito_endpoint https://$host;

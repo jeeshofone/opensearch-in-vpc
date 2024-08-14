@@ -16,7 +16,7 @@ variable "aos_domain_name" {
 
 variable "opensearch_version" {
   type = string
-  default = "7.10"
+  default = "OpenSearch_2.13"
 }
 
 variable "aos_data_instance_count" {

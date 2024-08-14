@@ -1,6 +1,6 @@
 # OpenSearch in VPC
 
-This repository contains a reusable [Terraform](https://www.terraform.io) module for deploying [Amazon OpenSearch Service](https://aws.amazon.com/opensearch-service) domain inside [Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc). OpenSearch domain is exposed to the end users through a proxy [EC2](https://aws.amazon.com/ec2) instance, avoiding the need for SSH tunneling. [Amazon Cognito](https://aws.amazon.com/cognito) is used to provide an authentication mechanism.
+This repository contains a reusable [Terraform](https://www.terraform.io) module for deploying [Amazon OpenSearch Service](https://aws.amazon.com/opensearch-service) domain (running OpenSearch 2.13) inside [Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc). OpenSearch domain is exposed to the end users through a proxy [EC2](https://aws.amazon.com/ec2) instance, avoiding the need for SSH tunneling. [Amazon Cognito](https://aws.amazon.com/cognito) is used to provide an authentication mechanism.
 
 
 ## Background

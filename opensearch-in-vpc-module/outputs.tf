@@ -2,23 +2,23 @@
 # Elasticsearch
 ####################################################################################################
 output "opensearch_domain_arn" {
-  value = aws_elasticsearch_domain.aos.arn
+  value = aws_opensearch_domain.aos.arn
 }
 
 output "opensearch_domain_id" {
-  value = aws_elasticsearch_domain.aos.domain_id
+  value = aws_opensearch_domain.aos.domain_id
 }
 
 output "opensearch_domain_name" {
-  value = aws_elasticsearch_domain.aos.domain_name
+  value = aws_opensearch_domain.aos.domain_name
 }
 
 output "opensearch_domain_endpoint" {
-  value = aws_elasticsearch_domain.aos.endpoint
+  value = aws_opensearch_domain.aos.endpoint
 }
 
-output "opensearch_domain_kibana_endpoint" {
-  value = aws_elasticsearch_domain.aos.kibana_endpoint
+output "opensearch_domain_dashboard_endpoint" {
+  value = aws_opensearch_domain.aos.dashboard_endpoint
 }
 
 output "opensearch_security_group_id" {

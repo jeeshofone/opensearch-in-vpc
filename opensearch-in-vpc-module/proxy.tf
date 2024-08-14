@@ -43,7 +43,7 @@ resource "aws_instance" "proxy" {
   user_data = templatefile("${path.module}/proxy_instance_init_script.sh", {
     self_signed_certificate_subject = var.self_signed_certificate_subject
     vpc_dns_resolver_ip = cidrhost(data.aws_vpc.selected.cidr_block, 2)
-    elasticsearch_endpoint = aws_elasticsearch_domain.aos.endpoint
+    opensearch_endpoint = aws_opensearch_domain.aos.endpoint
     cognito_host = local.cognito_user_pool_domain
   })
 
