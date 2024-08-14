@@ -4,7 +4,7 @@ module "opensearch_example" {
   aos_domain_name = "my-example"
 
   aos_data_instance_count = 1
-  aos_data_instance_type = "t3.small.elasticsearch"
+  aos_data_instance_type = "t3.small.search"
   aos_data_instance_storage = 50
   aos_master_instance_count = 0
   aos_master_instance_type = "t3.small.elasticsearch"
