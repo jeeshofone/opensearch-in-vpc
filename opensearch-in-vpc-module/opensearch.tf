@@ -21,9 +21,9 @@ data "aws_iam_role" "aos_service_linked_role" {
   ]
 }
 
-resource "aws_elasticsearch_domain" "aos" {
+resource "aws_opensearch_domain" "aos" {
   domain_name = var.aos_domain_name
-  elasticsearch_version = var.opensearch_version
+  engine_version = var.opensearch_version
 
   cluster_config {
     instance_count = var.aos_data_instance_count
