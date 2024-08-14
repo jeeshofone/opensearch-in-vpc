@@ -59,7 +59,7 @@ resource "aws_instance" "proxy" {
 
 resource "aws_eip" "proxy" {
   instance = aws_instance.proxy.id
-  vpc = true
+  domain   = "vpc"
 
   tags = merge(var.tags, {
     Name = "${var.aos_domain_name}-opensearch-proxy"

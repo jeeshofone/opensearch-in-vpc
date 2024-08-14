@@ -97,7 +97,7 @@ resource "null_resource" "set_cognito_identity_providers" {
   }
 
   depends_on = [
-    aws_elasticsearch_domain.aos,
+    aws_opensearch_domain.aos,
     aws_cognito_user_pool_client.aos_user_pool_client,
     aws_cognito_identity_pool.aos_pool
   ]
