@@ -110,8 +110,8 @@ terraform destroy
 
 ## Planning for Production Workloads
 
-Please note that the Amazon OpenSearch domain configured in this example consists of a single `t3.small.elasticsearch` data node. This is to avoid unexpected high costs while experimenting with the example code.
-However, this is by far not the recommended configuration for operating production-grade OpenSearch domains. You should be using at least `m5.large.elasticsearch` nodes for production domains. For more information about sizing your OpenSearch domain properly for production usage, please take a look at following blog posts:
+Please note that the Amazon OpenSearch domain configured in this example consists of a single `t3.small.search` data node. This is to avoid unexpected high costs while experimenting with the example code.
+However, this is by far not the recommended configuration for operating production-grade OpenSearch domains. You should be using at least `m5.large.search` nodes for production domains. For more information about sizing your OpenSearch domain properly for production usage, please take a look at following blog posts:
 
 - [Best practices for configuring your Amazon OpenSearch Service domain](https://aws.amazon.com/blogs/big-data/best-practices-for-configuring-your-amazon-opensearch-service-domain)
 - [Get Started with Amazon Elasticsearch Service: How Many Data Instances Do I Need?](https://aws.amazon.com/blogs/database/get-started-with-amazon-elasticsearch-service-how-many-data-instances-do-i-need)

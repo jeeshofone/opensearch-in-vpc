@@ -44,11 +44,11 @@ resource "aws_cognito_user_pool_client" "aos_user_pool_client" {
   supported_identity_providers = ["COGNITO"]
 
   callback_urls = [
-    "https://${data.aws_elasticsearch_domain.aos.kibana_endpoint}app/kibana"
+    "https://${aws_opensearch_domain.aos.dashboard_endpoint}app/dashboards"
   ]
 
   logout_urls = [
-    "https://${data.aws_elasticsearch_domain.aos.kibana_endpoint}app/kibana"
+    "https://${aws_opensearch_domain.aos.dashboard_endpoint}app/dashboards"
   ]
 
   allowed_oauth_flows = ["code"]
