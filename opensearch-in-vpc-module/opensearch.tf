@@ -77,8 +77,8 @@ resource "aws_opensearch_domain" "aos" {
         --user-pool-id ${aws_cognito_user_pool.aos_pool.id} \
         --client-id ${aws_cognito_user_pool_client.aos_user_pool_client.id} \
         --supported-identity-providers "COGNITO" \
-        --callback-urls "https://${self.kibana_endpoint}app/kibana" \
-        --logout-urls "https://${self.kibana_endpoint}app/kibana" \
+        --callback-urls "https://${self.dashboard_endpoint}app/dashboards" \
+        --logout-urls "https://${self.dashboard_endpoint}app/dashboards" \
         --allowed-o-auth-flows "code" \
         --allowed-o-auth-scopes "email" "openid" \
         --allowed-o-auth-flows-user-pool-client \
