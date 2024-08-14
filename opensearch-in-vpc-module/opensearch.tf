@@ -50,7 +50,8 @@ resource "aws_opensearch_domain" "aos" {
   }
 
   vpc_options {
-    vpc_id = var.vpc_id
+    subnet_ids         = var.aos_domain_subnet_ids
+    security_group_ids = [aws_security_group.opensearch.id]
   }
 
   encrypt_at_rest {
