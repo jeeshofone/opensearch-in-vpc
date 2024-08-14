@@ -64,7 +64,8 @@ variable "aos_domain_subnet_ids" {
 # VPC
 ####################################################################################################
 variable "vpc_id" {
-  type = string
+  type        = string
+  description = "The ID of the VPC where the OpenSearch domain will be created"
 }
 
 variable "proxy_inbound_cidr_blocks" {

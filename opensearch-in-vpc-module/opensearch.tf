@@ -21,6 +21,14 @@ data "aws_iam_role" "aos_service_linked_role" {
   ]
 }
 
+resource "aws_opensearch_vpc_endpoint" "aos_vpc_endpoint" {
+  domain_arn = aws_opensearch_domain.aos.arn
+  vpc_id     = var.vpc_id
+  subnet_ids = var.aos_domain_subnet_ids
+
+  security_group_ids = [aws_security_group.opensearch.id]
+}
+
 resource "aws_opensearch_domain" "aos" {
   domain_name    = var.aos_domain_name
   engine_version = var.opensearch_version
@@ -42,8 +50,7 @@ resource "aws_opensearch_domain" "aos" {
   }
 
   vpc_options {
-    subnet_ids         = var.aos_domain_subnet_ids
-    security_group_ids = [aws_security_group.opensearch.id]
+    vpc_id = var.vpc_id
   }
 
   encrypt_at_rest {
